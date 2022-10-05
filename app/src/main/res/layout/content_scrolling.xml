@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_scrolling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScrollingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:background="@android:color/holo_red_light">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_min"
+        android:layout_marginStart="@dimen/common_margin_min"
+        android:layout_marginEnd="@dimen/common_margin_min"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_default"
+            android:paddingStart="@dimen/common_padding_default"
+            android:paddingEnd="@dimen/common_padding_default"
+            android:background="@android:color/holo_orange_light">
+
+            <ImageView
+                android:id="@+id/imgCard1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_img_size"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:text="@string/first_card"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard1" />
+
+            <TextView
+                android:id="@+id/descripcion1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion1"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name1"
+                app:layout_constraintBottom_toTopOf="@id/btnwiki1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnwiki1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_btn_buy"
+                app:icon="@drawable/ic_new_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion1"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_cards"
+        android:layout_marginStart="@dimen/common_margin_min"
+        android:layout_marginEnd="@dimen/common_margin_min"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_default"
+            android:paddingStart="@dimen/common_padding_default"
+            android:paddingEnd="@dimen/common_padding_default"
+            android:background="@android:color/holo_orange_light">
+
+            <ImageView
+                android:id="@+id/imgCard2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_img_size"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:text="@string/second_card"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard2" />
+
+            <TextView
+                android:id="@+id/descripcion2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion2"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name2"
+                app:layout_constraintBottom_toTopOf="@id/btnwiki2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnwiki2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_btn_buy"
+                app:icon="@drawable/ic_new_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_cards"
+        android:layout_marginStart="@dimen/common_margin_min"
+        android:layout_marginEnd="@dimen/common_margin_min"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_default"
+            android:paddingStart="@dimen/common_padding_default"
+            android:paddingEnd="@dimen/common_padding_default"
+            android:background="@android:color/holo_orange_light">
+
+            <ImageView
+                android:id="@+id/imgCard3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_img_size"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:text="@string/tercera_card"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard3" />
+
+            <TextView
+                android:id="@+id/descripcion3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descrpcion3"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name3"
+                app:layout_constraintBottom_toTopOf="@id/btnwiki3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnwiki3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_btn_buy"
+                app:icon="@drawable/ic_new_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_cards"
+        android:layout_marginStart="@dimen/common_margin_min"
+        android:layout_marginEnd="@dimen/common_margin_min"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_padding_default"
+            android:paddingStart="@dimen/common_padding_default"
+            android:paddingEnd="@dimen/common_padding_default"
+            android:background="@android:color/holo_orange_light">
+
+            <ImageView
+                android:id="@+id/imgCard4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_img_size"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:text="@string/four_card"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard4" />
+
+            <TextView
+                android:id="@+id/descripcion4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion4"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name4"
+                app:layout_constraintBottom_toTopOf="@id/btnwiki4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnwiki4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_btn_buy"
+                app:icon="@drawable/ic_new_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
